@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ACCOLADE #11.25 – Vadhic Theme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Background with subtle traditional pattern */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+    body {
+      background: linear-gradient(135deg, #ffeb99 0%, #ead1b0 70%, #f1c881 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #302408;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+      background-repeat: repeat;
+      background-size: 60px 60px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      background: #e1b865;
+      box-shadow: 0 4px 20px #9a7a2f55;
+      border-bottom: 4px solid #b88a40;
+      padding: 1.8rem 2rem 1.8rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 110px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      color: #6d5b14;
+      flex-grow: 1;
+    }
+
+    .header-text > div {
+      text-shadow: 1px 1px 2px #ffeeb4;
+    }
+
+    .header-text .title {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: 1.3px;
+      margin-bottom: 0.2rem;
+    }
+
+    .header-text .subtitle {
+      font-size: 1.14rem;
+      font-weight: 600;
+      letter-spacing: 0.55px;
+      margin-top: -0.3rem;
+    }
+
+    .main-title {
+      flex-basis: 100%;
+      text-align: center;
+      font-family: 'Orbitron', 'Arial Black', sans-serif;
+      font-size: 3.3rem;
+      font-weight: 900;
+      letter-spacing: 6px;
+      color: #5a4305;
+      margin: 0.8rem 0 0 0;
+      text-shadow: 1px 1px 5px #f6e6b3;
+    }
+
+    
+
+    .events-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.3rem;
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .event-card {
+      background: #fffbe6cc;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px #b8985477;
+      border: 2px solid #bea45d88;
+      padding: 2.3rem 1.8rem 1.2rem 1.8rem;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.22s, box-shadow 0.22s;
+    }
+
+    .event-card:hover {
+      transform: scale(1.07) translateY(-8px);
+      box-shadow: 0 18px 48px #b8985488;
+      border-color: #f9d95e;
+    }
+
+    .event-title {
+      font-family: 'Orbitron', 'Arial Black', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      color: #5a4305;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-shadow: 0 3px 7px #ead1b0cc;
+    }
+
+    .event-description {
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+      color: #543a10dd;
+      text-align: center;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .event-buttons {
+      display: flex;
+      gap: 1.4rem;
+      justify-content: center;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .fest-btn {
+      flex-grow: 1;
+      background: #b88a40;
+      color: #fffbe6;
+      padding: 0.7rem 0;
+      margin: 0.2rem;
+      border: none;
+      border-radius: 9px;
+      font-size: 1.05rem;
+      cursor: pointer;
+      font-weight: 800;
+      letter-spacing: 1.3px;
+      box-shadow: 1px 2px 9px #b8985477;
+      transition: background 0.22s, color 0.18s, box-shadow 0.22s;
+      text-transform: uppercase;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .fest-btn:hover {
+      background: #6aaa4e;
+      color: #ffed9f;
+      box-shadow: 0 0 18px #6aaa4ecc;
+    }
+
+    footer {
+      background: #e1b865;
+      color: #1b1508;
+      text-align: center;
+      padding: 1.3rem 1rem;
+      font-size: 1.1rem;
+      border-top: 4px solid #b88a40;
+      box-shadow: inset 0 1px 5px #b3994270;
+    }
+
+    footer a {
+      color: #512d00;
+      text-decoration: underline;
+    }
+
+   /* Responsive Adjustments */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header-text {
+    align-items: center;
+  }
+  .main-title {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .event-card {
+    width: 95%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+  header img {
+    height: 80px;
+  }
+  .header-text .title {
+    font-size: 1.2rem;
+  }
+  .header-text .subtitle {
+    font-size: 0.95rem;
+  }
+  .main-title {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+  }
+  .event-title {
+    font-size: 1.2rem;
+  }
+  .event-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .event-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .fest-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://ptes.edu.in/wp-content/uploads/2020/04/cropped-ptes-e1591128262223.png" alt="PTES Logo" />
+    <div class="header-text">
+      <div class="title">PeopleTree Education Society</div>
+      <div class="subtitle">Department of Bachelor of Computer Applications</div>
+    </div>
+    <div class="main-title">ACCOLADE #11.25</div>
+  </header>
+  <main>
+    <br>
+    <section class="events-container">
+      <article class="event-card">
+        <div class="event-title">Gaming</div>
+        <div class="event-description">
+          Arcade showdowns, team play, and strategic battles.<br />
+          <em>Challenge peers and claim fest glory!</em>
+        </div>
+        <div class="event-buttons">
+          <a href="gaming.html"><button class="fest-btn" >RULES</button></a>
+          <a href="https://forms.gle/y1Qv5LsZoLcz4Wfn8"><button class="fest-btn" >REGISTRATION</button></a>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-title">Coding</div>
+        <div class="event-description">
+          Hackathons, logic puzzles, and code sprints.<br />
+          <em>Unleash your talent and compete in style.</em>
+        </div>
+        <div class="event-buttons">
+          <a href="coding.html"><button class="fest-btn" >RULES</button></a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6cpawr7124yAGO0HdWdEFdCC__5smFniey7CKf83ZobyvQA/viewform?usp=dialog"><button class="fest-btn" >REGISTRATION</button></a>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-title">Cultural</div>
+        <div class="event-description">
+          Music, dance, drama—blend tradition and creativity.<br />
+          <em>Group acts and solo shines welcomed!</em>
+        </div>
+        <div class="event-buttons">
+         <a href="cultural.html"><button class="fest-btn" >RULES</button></a> 
+         <a href="https://forms.gle/KpVT6wKxEymBZRUX7"><button class="fest-btn">REGISTRATION</button></a> 
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-title">Quiz</div>
+        <div class="event-description">
+          Buzzers, rounds, and brain-teasers on tech and culture.<br />
+          <em>Assemble your team for knowledge battles!</em>
+        </div>
+        <div class="event-buttons">
+         <a href="quiz.html"> <button class="fest-btn">RULES</button></a>
+          <a href="https://forms.gle/vwqa3maJCzUzKSadA"><button class="fest-btn" >REGISTRATION</button></a>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-title">Communication</div>
+        <div class="event-description">
+          Debate, elocution, and creative talks.<br />
+          <em>Win hearts with words and wit.</em>
+        </div>
+        <div class="event-buttons">
+          <a href="communication.html"><button class="fest-btn">RULES</button></a>
+          <a href="https://forms.gle/codKeQ6nB77kTuRf8"><button class="fest-btn" >REGISTRATION</button></a>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-title">Design</div>
+        <div class="event-description">
+          Posters, digital art, and branding contests.<br />
+          <em>Create visuals inspired by fest spirit.</em>
+        </div>
+        <div class="event-buttons">
+        <a href="design.html"><button class="fest-btn">RULES</button></a> 
+          <a href="https://forms.gle/jAeEMawFKXNHy2Js7"><button class="fest-btn" >REGISTRATION</button></a>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-title">Event Orginizer</div>
+        <div class="event-description">
+         Anannya A Killekar:<br />
+          80887 91890<br />
+        </div>
+      
+      </article>
+    </section>
+  </main>
+  <footer>
+    <strong>For More Information:</strong>
+    CTS No.10588/1,2,3 Behind Ramdev Hotel, Nehru Nagar, Belagavi - 590010 |
+    <a href="mailto:ptesbgm@ptes.edu.in">ptesbgm@ptes.edu.in</a> |
+    <a href="https://www.ptes.edu.in/">Website: www.ptes.edu.in</a> 
+  </footer>
+
+  <script>
+    const rules = {
+      gaming: "Gaming Event Rules:\n1. Only registered teams allowed.\n2. No cheating or hacks.\n3. Game title and format announced on fest day.\n4. Judge decisions are final.",
+      coding: "Coding Event Rules:\n1. Code originality required.\n2. Limited time per round.\n3. Submissions via fest portal.\n4. Results on accuracy and speed.",
+      cultural: "Cultural Event Rules:\n1. Props and music to be approved.\n2. Time slot per act.\n3. Scoring by expert jury.\n4. Safety guidelines apply.",
+      quiz: "Quiz Event Rules:\n1. Teams up to 3 members.\n2. No mobile devices during rounds.\n3. Buzzer or written format.\n4. Tie-breakers if required.",
+      communication: "Communication Event Rules:\n1. Topics prior to event.\n2. Respectful participation mandatory.\n3. Judges score clarity and impact.\n4. Timings strict.",
+      design: "Design Event Rules:\n1. Only original submissions allowed.\n2. Deadline before event close.\n3. No copyrighted assets.\n4. Judged on theme and creativity."
+    };
+
+    function showRules(event) {
+      alert(rules[event] || "Rules not available.");
+    }
+
+    function registerEvent(event) {
+      alert("Registration for " + event.charAt(0).toUpperCase() + event.slice(1) + " will open soon! Stay tuned to fest notices.");
+    }
+  </script>
+</body>
+</html>

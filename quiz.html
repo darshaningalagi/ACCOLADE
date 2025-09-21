@@ -6,93 +6,163 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 950px;
       margin: 20px auto;
-      padding: 0 15px;
-      background: #fffdf6;
-      color: #302408;
+      padding: 0 25px;
+      background-image: url('rules bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #2c2c2c;
       line-height: 1.6;
     }
+    section {
+      background: rgba(255, 255, 255, 0.93);
+      padding: 28px 32px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    img {
+      height: 110px;
+      margin-bottom: 25px;
+      user-select: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.8rem;
       font-weight: 900;
-      color: #6d5b14;
-      border-bottom: 2px solid #b88a40;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      color: #715e1e;
+      border-bottom: 3px solid #b88a40;
+      padding-bottom: 14px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       text-align: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      user-select: none;
     }
     ul {
-      padding-left: 25px;
-      font-size: 1.15rem;
-      margin-top: 10px;
+      padding-left: 30px;
+      font-size: 1.18rem;
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: #494028;
+      font-weight: 600;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
     }
     li {
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
-    pre{
-      font-size: 1.3rem;
-      color: #7a621f;
+    .organizers {
+      font-family: monospace;
+      font-size: 1.15rem;
+      color: #6f5a12;
+      background: #f9f6e7;
+      border-left: 6px solid #b88a40;
+      padding: 20px 25px;
+      border-radius: 10px;
+      white-space: pre-line;
+      max-width: 640px;
+      margin: 32px auto 40px auto;
+      box-shadow: 1px 2px 8px rgba(0,0,0,0.1);
+      text-align: left;
+      font-weight: 700;
+      user-select: text;
     }
-button{
-      height: 60px;
-      width: 100px;
-      background-color: #866b20;
+    a {
+      display: block;
+      width: max-content;
+      margin: 0 auto 50px auto;
+      text-decoration: none;
+    }
+    button {
+      height: 55px;
+      width: 140px;
+      background: linear-gradient(135deg, #bfa73a, #8c7316);
       border-radius: 30px;
+      border: none;
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
+      transition: transform 0.25s ease, background 0.3s ease;
+      text-transform: uppercase;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      user-select: none;
     }
-    /* Responsive typography and layout */
-    @media (max-width: 900px) {
-      body {
-        max-width: 95vw;
-      }
+    button:hover {
+      transform: scale(1.07);
+      background: linear-gradient(135deg, #a6912f, #6e5911);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
       }
       ul {
         font-size: 1.05rem;
+        max-width: 100%;
       }
-    }
-    @media (max-width: 600px) {
-      body {
-        padding: 0 10px;
+      li {
+        font-size: 1rem;
       }
-      h1 {
-        font-size: 1.7rem;
+      .organizers {
+        font-size: 1rem;
+        padding: 18px 20px;
+        max-width: 100%;
       }
-      ul {
+      button {
+        width: 130px;
         font-size: 1rem;
       }
     }
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.9rem;
       }
       ul {
+        padding-left: 22px;
         font-size: 0.95rem;
+      }
+      li {
+        font-size: 0.9rem;
+      }
+      button {
+        width: 110px;
+        height: 48px;
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Quiz Rules - ACCOLADE #11.25</h1>
-  <ul>
-    <li>Each team must have exactly 4 members.</li>
-    <li>The quiz consists of multiple-choice questions.</li>
-    <li>Participants must collaborate within their team only.</li>
-    <li>Use of external resources or communication outside the team during the quiz is strictly prohibited.</li>
-    <li>Correct answers will be awarded points. Cheating or misbehavior will result in disqualification.</li>
-    <li>In case of a tie, a tiebreaker question or procedure will be used to determine the winner.</li>
-    <li>Participants are required to respect the quiz questions and content, which are the property of the organizers.</li>
-    <li>By participating, contestants agree to abide by these rules and regulations.</li>
-  </ul>
-<h2><pre>
-Event Organizers:
-Akanksha K
-99802 60251
-Alimzan Mulla
-</pre></h2>
- <a href="index.html"><button>Home</button></a>
+  <section>
+    <img src="quiz.png" alt="Quiz Event Logo" />
+    <h1>Quiz Rules - ACCOLADE #11.25</h1>
+    <ul>
+      <li>Each team must have exactly 4 members.</li>
+      <li>The quiz consists of multiple-choice questions.</li>
+      <li>Participants must collaborate within their team only.</li>
+      <li>Use of external resources or communication outside the team during the quiz is strictly prohibited.</li>
+      <li>Correct answers will be awarded points. Cheating or misbehavior will result in disqualification.</li>
+      <li>In case of a tie, a tiebreaker question or procedure will be used to determine the winner.</li>
+      <li>Participants are required to respect the quiz questions and content, which are the property of the organizers.</li>
+      <li>By participating, contestants agree to abide by these rules and regulations.</li>
+    </ul>
+    <div class="organizers">
+Event Organizers:  
+Akanksha K - 99802 60251  
+Alimzan Mulla
+    </div>
+  </section>
+
+  <a href="index.html"><button>Home</button></a>
 </body>
 </html>

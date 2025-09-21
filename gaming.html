@@ -2,155 +2,166 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ACCOLADE #11.25 - Gaming Event Rules</title>
+  <title>ACCOLADE #11.25 - Quiz Rules</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 950px;
       margin: 20px auto;
-      padding: 0 15px;
-      background: #fffef7;
-      color: #302408;
+      padding: 0 25px;
+      background-image: url('rules bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #2c2c2c;
       line-height: 1.6;
     }
-    h1 {
-      font-size: 2.6rem;
-      font-weight: 900;
-      color: #6d5b14;
-      border-bottom: 3px solid #b88a40;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+    section {
+      background: rgba(255, 255, 255, 0.93);
+      padding: 25px 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
       text-align: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    h2 {
-      color: #7a621f;
-      font-size: 1.8rem;
-      padding-bottom: 6px;
-      border-bottom: 2px solid #d1c27c;
-      margin-top: 30px;
-      margin-bottom: 15px;
+    img {
+      display: block;
+      margin: 0 auto 20px auto;
+      height: 110px;
+      width: 110px;
+      border-radius: 50%;
+      border: 3px solid #bfa73a;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.15);
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #715e1e;
+      border-bottom: 3px solid #b88a40;
+      padding-bottom: 12px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
     }
     ul {
-      padding-left: 25px;
-      font-size: 1.1rem;
-      margin-bottom: 25px;
+      text-align: left;
+      max-width: 720px;
+      margin: 0 auto 25px auto;
+      padding-left: 28px;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: #494028;
     }
-    ul li {
-      margin-bottom: 10px;
+    li {
+      margin-bottom: 14px;
     }
-    p.intro {
+    .organizers {
+      font-family: monospace;
       font-size: 1.15rem;
-      margin-bottom: 25px;
+      color: #6f5a12;
+      background: #f9f6e7;
+      border-left: 6px solid #b88a40;
+      padding: 18px 25px;
+      border-radius: 10px;
+      white-space: pre-line;
+      max-width: 640px;
+      margin: 30px auto 40px auto;
+      box-shadow: 1px 2px 6px rgba(0,0,0,0.1);
+      text-align: left;
     }
-button{
-      height: 60px;
-      width: 100px;
-      background-color: #866b20;
+    a {
+      display: block;
+      width: max-content;
+      margin: 0 auto 50px auto;
+      text-decoration: none;
+    }
+    button {
+      height: 55px;
+      width: 130px;
+      background: linear-gradient(135deg, #bfa73a, #8c7316);
       border-radius: 30px;
+      border: none;
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
+      transition: transform 0.2s ease, background 0.3s ease;
     }
-    /* Responsive typography and spacing */
-    @media (max-width: 900px) {
-      body {
-        max-width: 95vw;
-      }
+    button:hover {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, #a6912f, #6e5911);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
       h1 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
       }
-      h2 {
-        font-size: 1.5rem;
+      ul {
+        font-size: 1.05rem;
+      }
+      li {
+        font-size: 1rem;
+      }
+      .organizers {
+        font-size: 1rem;
+        padding: 15px 20px;
+        max-width: 100%;
+      }
+      button {
+        width: 110px;
+        font-size: 1rem;
+      }
+      img {
+        height: 90px;
+        width: 90px;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.75rem;
       }
       ul {
         font-size: 1rem;
+        padding-left: 20px;
       }
-    }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      h2 {
-        font-size: 1.3rem;
-      }
-      ul {
+      li {
         font-size: 0.95rem;
+      }
+      button {
+        width: 100px;
+        height: 50px;
+        font-size: 0.95rem;
+      }
+      img {
+        height: 75px;
+        width: 75px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Gaming Event - ACCOLADE #11.25</h1>
-
   <section>
-    <h2>List of Games</h2>
+    <img src="quiz.png" alt="Quiz Event Logo" />
+    <h1>Quiz Rules - ACCOLADE #11.25</h1>
     <ul>
-      <li>Treasure Hunt</li>
-      <li>BGMI</li>
+      <li>Each team must have exactly 4 members.</li>
+      <li>The quiz consists of multiple-choice questions.</li>
+      <li>Participants must collaborate within their team only.</li>
+      <li>Use of external resources or communication outside the team during the quiz is strictly prohibited.</li>
+      <li>Correct answers will be awarded points. Cheating or misbehavior will result in disqualification.</li>
+      <li>In case of a tie, a tiebreaker question or procedure will be used to determine the winner.</li>
+      <li>Participants are required to respect the quiz questions and content, which are the property of the organizers.</li>
+      <li>By participating, contestants agree to abide by these rules and regulations.</li>
     </ul>
+    <div class="organizers">
+Event Organizers:  
+Akanksha K - 99802 60251  
+Alimzan Mulla
+    </div>
   </section>
-
-  <section>
-    <h2>Requirements for Gaming Competition</h2>
-    <ul>
-      <li>Bring your accessories like headphones, finger gloves, and charger.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>General Rules and Regulations</h2>
-    <ul>
-      <li>Each team consists of 4 members.</li>
-      <li>No third-party applications or cheat codes will be allowed.</li>
-      <li>If any participant is found cheating, that team will be disqualified immediately.</li>
-      <li>Understand and follow the rules of the games as given by the organizers.</li>
-      <li>Participants must stay in the game until it officially ends.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Treasure Hunt Rules</h2>
-    <ul>
-      <li>The duration of the treasure hunt is 3 hours.</li>
-      <li>Teams must find the clues in the sequence provided by organizers.</li>
-      <li>Teams must stay together within sight and not run ahead.</li>
-      <li>No use of mobile phones while solving clues.</li>
-      <li>Cheating will result in immediate team disqualification.</li>
-      <li>The goal is to complete the task within the given time.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>BGMI Rules</h2>
-    <ul>
-      <li>The use of aimbot, trigger bots, ESP, or any hacking tools is strictly prohibited.</li>
-      <li>Using any hacking application on your device will lead to disqualification.</li>
-      <li>Team up with opponents is prohibited.</li>
-      <li>Teams will be assigned slots according to numbers.</li>
-      <li>There will be three matches:</li>
-      <ul>
-        <li>Erangel</li>
-        <li>Sanhok</li>
-        <li>Miramar</li>
-      </ul>
-    </ul>
-  </section>
-
-  <section>
-    <h2>BGMI Point System</h2>
-    <ul>
-      <li>Winner Winner Chicken Dinner: 10 points</li>
-      <li>Placement points: 10 points</li>
-      <li>Finish points: 1 point per kill</li>
-    </ul>
-  </section>
-<h2><pre>
-Event Organizers:
-Prajwal M Gangoor
-6363323523
-Ujwal V Yarnal
-82177 38642
-
-</pre></h2>
- <a href="index.html"><button>Home</button></a>
+  <a href="index.html"><button>Home</button></a>
 </body>
 </html>

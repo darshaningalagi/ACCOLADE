@@ -6,118 +6,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 950px;
       margin: 20px auto;
       padding: 0 15px;
-      background: #fffdf6;
-      color: #302408;
+      background-image: url('rules bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #2c2c2c;
       line-height: 1.6;
     }
     h1 {
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       font-weight: 900;
-      color: #6d5b14;
-      border-bottom: 2px solid #b88a40;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
+      color: #715e1e;
       text-align: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #000;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
     h2 {
       font-size: 2rem;
-      color: #7a621f;
-      border-bottom: 2px solid #d1c27c;
-      padding-bottom: 6px;
+      color: #1a1a1a;
+      border-left: 6px solid #dbc68d;
+      padding-left: 10px;
+      margin-top: 25px;
       margin-bottom: 15px;
+      text-transform: uppercase;
     }
     ul {
-      padding-left: 25px;
+      padding-left: 20px;
       font-size: 1.15rem;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+      color: #494028;
     }
     li {
       margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      list-style-type: square;
     }
-button{
-      height: 60px;
-      width: 100px;
-      background-color: #866b20;
+    .headerbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .headerbox img {
+      margin-right: 15px;
+      border-radius: 50%;
+      border: 3px solid #dbc68d;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+    section {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 35px;
+    }
+    .organizers {
+      font-size: 1.1rem;
+      padding: 15px;
+      background: #f9f4e6;
+      border-left: 5px solid #dbc68d;
+      border-radius: 8px;
+      margin-top: 15px;
+      white-space: pre-line;
+      font-family: monospace;
+    }
+    button {
+      height: 55px;
+      width: 120px;
+      background: linear-gradient(135deg, #dbc68d, #c4a961);
       border-radius: 30px;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, background 0.3s ease;
     }
-    /* Responsive typography and layout */
-    @media (max-width: 900px) {
-      body {
-        max-width: 95vw;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      h2 {
-        font-size: 1.7rem;
-      }
-      ul {
-        font-size: 1.05rem;
-      }
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #c9b06a, #b2924e);
     }
-    @media (max-width: 600px) {
-      body {
-        padding: 0 10px;
-      }
-      h1 {
-        font-size: 1.7rem;
-      }
-      h2 {
-        font-size: 1.4rem;
-      }
-      ul {
-        font-size: 1rem;
-      }
+    a {
+      text-decoration: none;
     }
-    @media (max-width: 400px) {
-      h1 {
-        font-size: 1.4rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-      ul {
-        font-size: 0.95rem;
-      }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.7rem; }
+      ul { font-size: 1.05rem; }
+      li { font-size: 18px; }
+      .headerbox { flex-direction: column; }
+      .headerbox img { margin-bottom: 10px; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      ul { font-size: 1rem; }
+      li { font-size: 16px; }
     }
   </style>
 </head>
 <body>
-  <h1>Cultural Event Rules - ACCOLADE #11.25</h1>
-  
+  <section>
+  <div class="headerbox">
+    <img src="cultural.png" height="110px" width="110px" alt="Cultural Logo">
+    <h1>Cultural Event Rules - ACCOLADE #11.25</h1>
+  </div>
+</section>
   <section>
     <h2>Cultural Fusion Dance</h2>
     <ul>
-      <li>Theme: Cultural Fusion.</li>
-      <li>Team must have 6-8 members including at least 2 boys.</li>
-      <li>Performance time must not exceed 5 minutes.</li>
-      <li>Dress code must be followed.</li>
-      <li>Performances must not be offensive to any religion or caste.</li>
+      <li>Theme: Cultural Fusion</li>
+      <li>Team must have 6-8 members including at least 2 boys</li>
+      <li>Performance time must not exceed 5 minutes</li>
+      <li>Dress code must be followed</li>
+      <li>Performances must not be offensive to any religion or caste</li>
     </ul>
+    <div class="organizers">
+Event Organizers:  
+Shradha Yadav - 9019468099  
+Divyashri Sutar
+    </div>
   </section>
 
   <section>
     <h2>Rampwalk - Vedic Theme</h2>
     <ul>
-      <li>Theme: Vedic.</li>
-      <li>Team must have 6-8 members including boys.</li>
-      <li>Time limit is 3 minutes.</li>
-      <li>Use of props earns extra points.</li>
-      <li>Theme topics must relate to Vedic culture and must not be repeated.</li>
+      <li>Theme: Vedic</li>
+      <li>Team must have 6-8 members including boys</li>
+      <li>Time limit is 3 minutes</li>
+      <li>Use of props earns extra points</li>
+      <li>Theme topics must relate to Vedic culture and must not be repeated</li>
     </ul>
- <h2><pre>
-Event Organizers: 
-Shradha Yadav
-79759 32239
-Divyashri Sutar
-
-    </pre></h2>
-     <a href="index.html"><button>Home</button></a>
+    <div class="organizers">
+Event Organizers:  
+Shradha Yadav - 79759 32239  
+Divyashri Sutar - 8123282965
+    </div>
+    <br>
+    <a href="index.html"><button>Home</button></a>
   </section>
 </body>
 </html>

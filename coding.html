@@ -7,156 +7,188 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 950px;
+      max-width: 960px;
       margin: 20px auto;
-      padding: 0 25px;
-      background-image: url('rules bg.png');
-      background-repeat: no-repeat;
+      padding: 0 25px 40px 25px;
+      background: 
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url('rules bg.png') no-repeat center center fixed;
       background-size: cover;
-      background-attachment: fixed;
       color: #2c2c2c;
-      line-height: 1.6;
+      line-height: 1.7;
+      user-select: text;
     }
     section {
-      background: rgba(255, 255, 255, 0.93);
-      padding: 28px 32px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-      margin-bottom: 40px;
-      text-align: center;
+      background: #fff;
+      padding: 36px 40px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      margin-bottom: 45px;
+      border: 2px solid #d4c17a;
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
     }
     img {
-      height: 110px;
-      margin-bottom: 25px;
+      display: block;
+      margin: 0 auto 30px auto;
+      max-height: 120px;
+      max-width: 100%;
       user-select: none;
+      filter: drop-shadow(0 3px 3px rgba(0,0,0,0.2));
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
     }
     h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 900;
       color: #715e1e;
-      border-bottom: 3px solid #b88a40;
-      padding-bottom: 14px;
-      margin-bottom: 30px;
+      border-bottom: 4px solid #b88a40;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
+      text-align: center;
+      user-select: none;
+      text-shadow: 1px 1px 3px #cab974cc;
     }
     h2 {
-      font-size: 1.7rem;
-      color: #6d591a;
-      margin-bottom: 12px;
-      font-weight: 800;
-      border-left: 5px solid #b88a40;
-      padding-left: 12px;
+      font-size: 1.85rem;
+      color: #6d5a18;
+      margin-bottom: 18px;
+      font-weight: 900;
+      border-left: 6px solid #b88a40;
+      padding-left: 16px;
       user-select: none;
-      text-align: left;
-      max-width: 850px;
-      margin: 0 auto 12px auto;
-    }
-    ul {
-      padding-left: 30px;
-      font-size: 1.18rem;
-      margin-top: 0;
-      margin-bottom: 25px;
-      color: #494028;
-      font-weight: 600;
-      max-width: 850px;
+      text-shadow: 1px 1px #ecd88e88;
+      max-width: 860px;
       margin-left: auto;
       margin-right: auto;
-      text-align: left;
+    }
+    ul {
+      padding-left: 36px;
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: #4f4615;
+      font-weight: 600;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.55;
     }
     ul ul {
-      padding-left: 20px;
+      padding-left: 24px;
       font-weight: 500;
-      color: #5a4d20;
+      color: #6e5f1a;
+      margin-bottom: 12px;
     }
     li {
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
     .organizers {
-      font-family: monospace;
-      font-size: 1.15rem;
-      color: #6f5a12;
-      background: #f9f6e7;
-      border-left: 6px solid #b88a40;
-      padding: 20px 25px;
-      border-radius: 10px;
+      font-family: Consolas, monospace;
+      font-size: 1.2rem;
+      color: #6a5513;
+      background: #f9f6e6;
+      border-left: 8px solid #babc5a;
+      padding: 25px 28px;
+      border-radius: 14px;
       white-space: pre-line;
-      max-width: 640px;
-      margin: 32px auto 40px auto;
-      box-shadow: 1px 2px 8px rgba(0,0,0,0.1);
-      text-align: left;
+      max-width: 680px;
+      margin: 40px auto 50px auto;
+      box-shadow: 0 4px 12px rgba(186, 188, 90, 0.3);
       font-weight: 700;
-      user-select: text;
+      text-align: left;
+      transition: background 0.25s ease;
+    }
+    .organizers:hover {
+      background: #fffde4;
     }
     a {
       display: block;
       width: max-content;
-      margin: 0 auto 50px auto;
+      margin: 0 auto;
       text-decoration: none;
+      margin-bottom: 25px;
     }
     button {
-      height: 55px;
-      width: 140px;
+      height: 56px;
+      width: 150px;
       background: linear-gradient(135deg, #bfa73a, #8c7316);
-      border-radius: 30px;
+      border-radius: 34px;
       border: none;
-      font-size: 1.15rem;
-      font-weight: bold;
-      color: #fff;
+      font-size: 1.18rem;
+      font-weight: 900;
+      color: #fffbe6;
       cursor: pointer;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
-      transition: transform 0.25s ease, background 0.3s ease;
+      box-shadow: 2px 3px 14px rgba(129, 108, 27, 0.7);
+      transition: transform 0.3s ease, background 0.4s ease;
       text-transform: uppercase;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       user-select: none;
+      letter-spacing: 1.4px;
     }
     button:hover {
-      transform: scale(1.07);
-      background: linear-gradient(135deg, #a6912f, #6e5911);
+      transform: scale(1.09) translateY(-2px);
+      background: linear-gradient(135deg, #a5912e, #6e5911);
+      box-shadow: 0 0 22px #a5912eaa;
     }
     /* Responsive */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
       }
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        padding-left: 14px;
+        border-left-width: 5px;
       }
       ul {
-        font-size: 1.05rem;
+        font-size: 1.06rem;
         max-width: 100%;
+        padding-left: 30px;
       }
       li {
+        margin-bottom: 14px;
+      }
+      .organizers {
+        font-size: 1.1rem;
+        padding: 20px 22px;
+        max-width: 100%;
+      }
+      button {
+        width: 140px;
+        font-size: 1.1rem;
+        height: 50px;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      ul {
+        font-size: 0.95rem;
+        padding-left: 24px;
+      }
+      li {
+        margin-bottom: 12px;
+      }
+      button {
+        width: 130px;
+        height: 46px;
         font-size: 1rem;
       }
       .organizers {
         font-size: 1rem;
         padding: 18px 20px;
-        max-width: 100%;
-      }
-      button {
-        width: 130px;
-        font-size: 1rem;
-      }
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.9rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-      ul {
-        padding-left: 22px;
-        font-size: 0.95rem;
-      }
-      li {
-        font-size: 0.9rem;
-      }
-      button {
-        width: 110px;
-        height: 48px;
-        font-size: 0.9rem;
       }
     }
   </style>

@@ -2,207 +2,277 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ACCOLADE #11.25 - Coding Rules</title>
+  <title>ACCOLADE #11.25 - Event Rounds & Rules</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 950px;
+      max-width: 960px;
       margin: 20px auto;
-      padding: 0 25px;
-      background-image: url('rules bg.png');
-      background-repeat: no-repeat;
+      padding: 0 25px 40px 25px;
+      background:
+        linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.93)),
+        url('rules bg.png') no-repeat center center fixed;
       background-size: cover;
-      background-attachment: fixed;
       color: #2c2c2c;
-      line-height: 1.6;
+      line-height: 1.7;
+      user-select: text;
     }
     section {
-      background: rgba(255, 255, 255, 0.93);
-      padding: 28px 32px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-      margin-bottom: 40px;
-      text-align: center;
+      background: #fff;
+      padding: 36px 40px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      margin-bottom: 45px;
+      border: 2px solid #d4c17a;
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
     }
     img {
-      height: 110px;
-      margin-bottom: 25px;
+      display: block;
+      margin: 0 auto 30px auto;
+      max-height: 120px;
+      max-width: 100%;
       user-select: none;
+      filter: drop-shadow(0 3px 3px rgba(0,0,0,0.2));
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
     }
     h1 {
       font-size: 2.8rem;
       font-weight: 900;
       color: #715e1e;
-      border-bottom: 3px solid #b88a40;
-      padding-bottom: 14px;
-      margin-bottom: 30px;
+      border-bottom: 4px solid #b88a40;
+      padding-bottom: 18px;
+      margin-bottom: 38px;
       text-transform: uppercase;
       letter-spacing: 2px;
+      text-align: center;
+      user-select: none;
+      text-shadow: 1px 1px 3px #cab974cc;
     }
     h2 {
-      font-size: 1.7rem;
-      color: #6d591a;
-      margin-bottom: 12px;
-      font-weight: 800;
-      border-left: 5px solid #b88a40;
-      padding-left: 12px;
+      font-size: 1.65rem;
+      color: #6d5a18;
+      margin-bottom: 15px;
+      font-weight: 900;
+      border-left: 6px solid #b88a40;
+      padding-left: 16px;
       user-select: none;
-      text-align: left;
-      max-width: 850px;
-      margin: 0 auto 12px auto;
-    }
-    ul {
-      padding-left: 30px;
-      font-size: 1.18rem;
-      margin-top: 0;
-      margin-bottom: 25px;
-      color: #494028;
-      font-weight: 600;
-      max-width: 850px;
+      text-shadow: 1px 1px #ecd88e88;
+      max-width: 860px;
       margin-left: auto;
       margin-right: auto;
-      text-align: left;
+      margin-top: 32px;
     }
-    ul ul {
-      padding-left: 20px;
-      font-weight: 500;
-      color: #5a4d20;
+    ul {
+      padding-left: 34px;
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: #4f4615;
+      font-weight: 600;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.53;
     }
     li {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .organizers {
-      font-family: monospace;
-      font-size: 1.15rem;
-      color: #6f5a12;
-      background: #f9f6e7;
-      border-left: 6px solid #b88a40;
-      padding: 20px 25px;
-      border-radius: 10px;
-      white-space: pre-line;
-      max-width: 640px;
-      margin: 32px auto 40px auto;
-      box-shadow: 1px 2px 8px rgba(0,0,0,0.1);
-      text-align: left;
+      font-family: Consolas, monospace;
+      font-size: 1.18rem;
+      color: #6a5513;
+      background: #f9f6e6;
+      border-left: 8px solid #babc5a;
+      padding: 20px 26px;
+      border-radius: 14px;
+      max-width: 680px;
+      margin: 38px auto 50px auto;
+      box-shadow: 0 4px 12px rgba(186, 188, 90, 0.24);
       font-weight: 700;
-      user-select: text;
+      text-align: left;
+      transition: background 0.22s ease;
     }
-    a {
-      display: block;
-      width: max-content;
-      margin: 0 auto 50px auto;
-      text-decoration: none;
+    .organizers:hover {
+      background: #fffde4;
     }
     button {
-      height: 55px;
-      width: 140px;
+      height: 50px;
+      width: 150px;
       background: linear-gradient(135deg, #bfa73a, #8c7316);
-      border-radius: 30px;
+      border-radius: 34px;
       border: none;
-      font-size: 1.15rem;
-      font-weight: bold;
-      color: #fff;
+      font-size: 1.18rem;
+      font-weight: 900;
+      color: #fffbe6;
       cursor: pointer;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
-      transition: transform 0.25s ease, background 0.3s ease;
+      box-shadow: 2px 3px 14px rgba(129, 108, 27, 0.7);
+      transition: transform 0.3s, background 0.4s;
       text-transform: uppercase;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       user-select: none;
+      letter-spacing: 1.2px;
+      display: block;
+      margin: 0 auto;
     }
     button:hover {
-      transform: scale(1.07);
-      background: linear-gradient(135deg, #a6912f, #6e5911);
+      transform: scale(1.09) translateY(-2px);
+      background: linear-gradient(135deg, #a5912e, #6e5911);
+      box-shadow: 0 0 22px #a5912eaa;
     }
     /* Responsive */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.1rem;
       }
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.22rem;
+        padding-left: 12px;
+        border-left-width: 4px;
       }
       ul {
         font-size: 1.05rem;
-        max-width: 100%;
-      }
-      li {
-        font-size: 1rem;
+        padding-left: 20px;
       }
       .organizers {
         font-size: 1rem;
-        padding: 18px 20px;
+        padding: 13px 14px;
         max-width: 100%;
       }
       button {
-        width: 130px;
-        font-size: 1rem;
+        width: 140px;
+        font-size: 1.04rem;
+        height: 44px;
       }
     }
     @media (max-width: 480px) {
       h1 {
-        font-size: 1.9rem;
+        font-size: 1.42rem;
       }
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       ul {
-        padding-left: 22px;
         font-size: 0.95rem;
-      }
-      li {
-        font-size: 0.9rem;
+        padding-left: 10px;
       }
       button {
-        width: 110px;
-        height: 48px;
-        font-size: 0.9rem;
+        width: 120px;
+        height: 37px;
+        font-size: 0.96rem;
+      }
+      .organizers {
+        font-size: 0.96rem;
+        padding: 10px 7px;
       }
     }
   </style>
 </head>
 <body>
   <section>
-    <img src="coding.png" alt="Coding Event Logo" />
-    <h1>Coding Event Rules - ACCOLADE #11.25</h1>
+    <img src="coding.png" alt="Accolade Coding Event Logo" />
+    <h1>ACCOLADE #11.25 – Event Rounds & Rules</h1>
 
-    <h2>1. Eligibility</h2>
+    <h2>Round 1: Dwarka Darshan</h2>
     <ul>
-      <li>Participation is open only to 1st, 3rd, and 5th semester students.</li>
-      <li>Each team must have 1 participant from each eligible semester (one from 1st, one from 3rd, and one from 5th).</li>
-      <li>Cross-department teams are allowed/not allowed based on event rules.</li>
+      <li>Each team must consist of 3 members.</li>
+      <li>Teams have to find hidden QR codes placed at different spots in the college.</li>
+      <li>Once the QR code is found, submit it to the volunteers present at the initial spot.</li>
+      <li>Scoring: Correct answer = 5 points awarded; Wrong answer = No points.</li>
+      <li>Time Limit: 45 minutes for teams to complete the round.</li>
+      <li>No team is allowed to damage QR codes.</li>
+      <li>Using external help (like searching online) may lead to disqualification.</li>
+      <li>Teams with the highest points & fastest completion qualify for the next round.</li>
     </ul>
 
-    <h2>2. Team Formation</h2>
+    <h2>Round 2: Arjun’s Aim</h2>
     <ul>
-      <li>Each team should have exactly 3 members.</li>
-      <li>Team name must be submitted at registration.</li>
-      <li>Once registered, no changes in team members will be allowed.</li>
+      <li>Each team must consist of 3 members.</li>
+      <li>Role Division:
+        <ul>
+          <li>Participant 1 → Coding (write the solution for the given problem).</li>
+          <li>Participant 2 → Debugging (fix errors in a buggy code).</li>
+          <li>Participant 3 → Code Optimization (improve existing code for efficiency).</li>
+        </ul>
+      </li>
+      <li>All three participants start their respective tasks at the same time.</li>
+      <li>Time Limit: 90 minutes for completion.</li>
+      <li>Scoring System:
+        <ul>
+          <li>Coding: Correctness & logic.</li>
+          <li>Debugging: Number of errors fixed.</li>
+          <li>Optimization: Efficiency, readability, and reduced complexity.</li>
+        </ul>
+      </li>
+      <li>No role exchange after the round begins, and no discussion/code-sharing during the tasks.</li>
+      <li>Any use of unfair means or outside help will lead to disqualification.</li>
+      <li>Team with the highest combined score qualifies for the next round.</li>
     </ul>
 
-    <h2>3. Event Rounds</h2>
+    <h2>Round 3: Yudh of Yudhisthira</h2>
     <ul>
-      <li>MCQ Round – Aptitude + Programming basics.</li>
-      <li>Coding Round – Solve problems within a time limit.</li>
-      <li>Debugging Round – Fix errors in a given code.</li>
-      <li>Final Round (Project/Problem Statement) – Build logic or small application (optional).</li>
+      <li>Each team will have 3 participants.</li>
+      <li>Quiz Details:
+        <ul>
+          <li>Topics: Java, Python, C, and General Programming Concepts.</li>
+          <li>Total Duration: 30 minutes.</li>
+          <li>Quiz comprises MCQs, output-based, and conceptual coding logic questions.</li>
+        </ul>
+      </li>
+      <li>Scoring: Each correct answer earns points. No negative marking. Final score is the team’s total.</li>
+      <li>No external help allowed (Google, ChatGPT, etc.); discussion is permitted only within the team.</li>
+      <li>Any unfair practice leads to disqualification.</li>
+      <li>Team with the highest quiz score within 30 minutes wins this round.</li>
     </ul>
 
-    <h2>4. Rules During the Event</h2>
+    <h2>Round 4: Chakravyuh</h2>
     <ul>
-      <li>Use of mobile phones, internet browsing, or external resources is strictly prohibited (unless specified by organizers).</li>
-      <li>Participants must use the system and compiler provided by organizers.</li>
-      <li>Code plagiarism (copy-paste from others/online) will lead to disqualification.</li>
-      <li>Each round will have a time limit; late submissions will not be accepted.</li>
+      <li>Each team will have 3 members.</li>
+      <li>Teams must write code to generate a given pattern (problem given at the start).</li>
+      <li>All members work together on the same code; teamwork is essential.</li>
+      <li>Time Limit: 60 minutes to complete the pattern.</li>
+      <li>Scoring:
+        <ul>
+          <li>Correct Output: Matches the required pattern.</li>
+          <li>Code Quality: Indentation, readability, and logic.</li>
+          <li>Efficiency: Minimal and optimized code.</li>
+        </ul>
+      </li>
+      <li>Only the provided system/editor may be used. No use of unauthorized resources.</li>
+      <li>Team that generates the correct pattern fastest and with clean, efficient code wins.</li>
+    </ul>
+
+    <h2>Round 5: Krishnas council</h2>
+    <ul>
+      <li>A problem statement is given to each team.</li>
+      <li>Teams must provide a solution and create a prototype based on their solution.</li>
+      <li>Time Limit: 90 minutes to develop the prototype.</li>  
+      <li>Scoring Criteria:</li>
+        <ul>
+          <li>Innovation: Creativity and originality of the solution.</li>
+          <li>Functionality: How well the prototype works.</li>
+          <li>Presentation: Clarity and effectiveness of the presentation.</li>
+        </ul>
+    
+    </ul> <li>each team must have their own devices for prototype development.</li>
+      <li>Teams can use any programming language or tools they are comfortable with.</li>
+      <li>The team with the most innovative, functional, and well-presented prototype wins.</li>
     </ul>
 
     <div class="organizers">
-Event Organizers:  
-Darshan Ingalagi - 6362329134  
+Event Organizers:<br>
+Darshan Ingalagi - 6362329134<br>
 Bhavana T - 93801 32805
     </div>
-  </section>
 
-  <a href="index.html"><button>Home</button></a>
+    <a href="index.html"><button>Home</button></a>
+  </section>
 </body>
 </html>

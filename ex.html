@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACCOLADE #11.25 - Coding Event Rounds & Rules</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #0f111a;
+      color: #fff;
+      font-family: 'Fira Code', Consolas, 'Courier New', monospace;
+      max-width: 960px;
+      padding: 20px 25px 40px 25px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      user-select: text;
+    }
+    h1,
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 5px #27ae60, 0 0 10px #2ecc71;
+      color: #27ae60;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      text-align: center;
+      border-bottom: 3px solid #2ecc71;
+      padding-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      user-select: none;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: #11141d;
+      padding: 10px 20px;
+      border-left: 5px solid #2ecc71;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.3s ease;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      /* text remains green for headers, but can change to white if desired */
+    }
+    h2:hover {
+      background: #1a1f2d;
+    }
+    section {
+      background: #11141d;
+      border-radius: 14px;
+      border: 2px solid #27ae60;
+      padding: 25px 30px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(39, 174, 96, 0.25);
+      transition: box-shadow 0.3s ease;
+      color: #fff;
+    }
+    section:hover {
+      box-shadow: 0 15px 40px rgba(46, 204, 113, 0.4);
+    }
+    ul {
+      padding-left: 1.6em;
+      color: #fff;
+      font-weight: 500;
+      max-width: 860px;
+    }
+    li {
+      margin-bottom: 0.7em;
+      line-height: 1.5;
+      color: #fff;
+    }
+    .code-block {
+      background: #1d212f;
+      border-radius: 8px;
+      padding: 15px 20px;
+      font-family: 'Fira Code', Consolas, monospace;
+      font-size: 1rem;
+      overflow-x: auto;
+      box-shadow: 0 3px 15px rgba(39, 174, 96, 0.2);
+      margin-bottom: 20px;
+      color: #fff;
+      white-space: pre-wrap;
+    }
+    .btn-home {
+      display: block;
+      width: 140px;
+      margin: 0 auto 40px auto;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      text-align: center;
+      color: #0f111a;
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      border: none;
+      border-radius: 34px;
+      cursor: pointer;
+      box-shadow: 0 5px 14px rgba(39, 174, 96, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .btn-home:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 7px 22px #27ae60;
+    }
+    .organizers {
+      font-family: 'Fira Code', Consolas, monospace;
+      font-size: 1.1rem;
+      color: #fff;
+      background: #08110f;
+      padding: 25px 30px;
+      border-left: 6px solid #27ae60;
+      border-radius: 8px;
+      max-width: 660px;
+      margin: 0 auto 50px auto;
+      box-shadow: 0 5px 18px rgba(46, 204, 113, 0.3);
+      line-height: 1.4;
+      font-weight: 600;
+      user-select: text;
+    }
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.33s ease-out;
+      margin-left: 10px;
+      padding-left: 15px;
+      border-left: 2px solid #27ae60;
+      color: #fff;
+      font-weight: 500;
+    }
+    .active + .content {
+      max-height: 2000px;
+      transition: max-height 0.5s ease-in;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 15px 20px 35px 20px;
+      }
+      h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      ul {
+        font-size: 1rem;
+      }
+      .btn-home {
+        width: 120px;
+        font-size: 1rem;
+      }
+      .organizers {
+        font-size: 0.95rem;
+        padding: 20px;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>ACCOLADE #11.25 - Coding Event Rounds & Rules</h1>
+
+  <section>
+    <h2 class="collapsible">Round 1: Dwarka Darshan</h2>
+    <div class="content">
+      <ul>
+        <li>Each team must consist of 3 members.</li>
+        <li>Teams have to find hidden QR codes placed at different spots in the college.</li>
+        <li>Once the QR code is found, submit it to the volunteers present at the initial spot.</li>
+        <li>Scoring: Correct answer = 5 points awarded; Wrong answer = No points.</li>
+        <li>Time Limit: 45 minutes for teams to complete the round.</li>
+        <li>No team is allowed to damage QR codes.</li>
+        <li>Using external help (like searching online) may lead to disqualification.</li>
+        <li>Teams with the highest points & fastest completion qualify for the next round.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="collapsible">Round 2: Arjun’s Aim</h2>
+    <div class="content">
+      <ul>
+        <li>Each team must consist of 3 members.</li>
+        <li>Role Division:
+          <ul>
+            <li>Participant 1 → Coding (write the solution for the given problem).</li>
+            <li>Participant 2 → Debugging (fix errors in a buggy code).</li>
+            <li>Participant 3 → Code Optimization (improve existing code for efficiency).</li>
+          </ul>
+        </li>
+        <li>All three participants start their respective tasks at the same time.</li>
+        <li>Time Limit: 90 minutes for completion.</li>
+        <li>Scoring System:
+          <ul>
+            <li>Coding: Correctness & logic.</li>
+            <li>Debugging: Number of errors fixed.</li>
+            <li>Optimization: Efficiency, readability, and reduced complexity.</li>
+          </ul>
+        </li>
+        <li>No role exchange after the round begins, and no discussion/code-sharing during the tasks.</li>
+        <li>Any use of unfair means or outside help will lead to disqualification.</li>
+        <li>Team with the highest combined score qualifies for the next round.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="collapsible">Round 3: Yudh of Yudhisthira</h2>
+    <div class="content">
+      <ul>
+        <li>Each team will have 3 participants.</li>
+        <li>Quiz Details:
+          <ul>
+            <li>Topics: Java, Python, C, and General Programming Concepts.</li>
+            <li>Total Duration: 30 minutes.</li>
+            <li>Quiz comprises MCQs, output-based, and conceptual coding logic questions.</li>
+          </ul>
+        </li>
+        <li>Scoring: Each correct answer earns points. No negative marking.</li>
+        <li>Final score is the team’s total.</li>
+        <li>No external help allowed (Google, ChatGPT, etc.); discussion is permitted only within the team.</li>
+        <li>Any unfair practice leads to disqualification.</li>
+        <li>Team with the highest quiz score within 30 minutes wins this round.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="collapsible">Round 4: Chakravyuh</h2>
+    <div class="content">
+      <ul>
+        <li>Each team will have 3 members.</li>
+        <li>Teams must write code to generate a given pattern (problem given at the start).</li>
+        <li>All members work together on the same code; teamwork is essential.</li>
+        <li>Time Limit: 60 minutes to complete the pattern.</li>
+        <li>Scoring:
+          <ul>
+            <li>Correct Output: Matches the required pattern.</li>
+            <li>Code Quality: Indentation, readability, and logic.</li>
+            <li>Efficiency: Minimal and optimized code.</li>
+          </ul>
+        </li>
+        <li>Only the provided system/editor may be used. No use of unauthorized resources.</li>
+        <li>Team that generates the correct pattern fastest and with clean, efficient code wins.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="collapsible">Round 5: Krishnas Council</h2>
+    <div class="content">
+      <ul>
+        <li>A problem statement is given to each team.</li>
+        <li>Teams must provide a solution and create a prototype based on their solution.</li>
+        <li>Time Limit: 90 minutes to develop the prototype.</li>
+        <li>Scoring Criteria:
+          <ul>
+            <li>Innovation: Creativity and originality of the solution.</li>
+            <li>Functionality: How well the prototype works.</li>
+            <li>Presentation: Clarity and effectiveness of the presentation.</li>
+          </ul>
+        </li>
+        <li>Each team must have their own devices for prototype development.</li>
+        <li>Teams can use any programming language or tools they are comfortable with.</li>
+        <li>The team with the most innovative, functional, and well-presented prototype wins.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="organizers">
+    <strong>Event Organizers:</strong><br />
+    Darshan Ingalagi - 6362329134<br />
+    Bhavana T - 93801 32805
+  </div>
+   
+
+  <script>
+    // Collapsible sections toggle
+    document.querySelectorAll('.collapsible').forEach((header) => {
+      header.addEventListener('click', () => {
+        header.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
